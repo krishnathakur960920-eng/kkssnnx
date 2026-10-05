@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hidden-state {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+#particles {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.particle {
+    position: absolute;
+    background: radial-gradient(circle, rgba(244, 63, 94, 0.8) 0%, rgba(244, 63, 94, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+@keyframes cuteWobble {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-4px) rotate(-3deg); }
+    75% { transform: translateY(-2px) rotate(3deg); }
+}
+
+#cute-heart {
+    animation: cuteWobble 3s ease-in-out infinite;
+}
+
+#climax-screen {
+    background: radial-gradient(circle at center, rgba(11, 12, 16, 0.6) 0%, #020005 100%);
+}
+
+#love-bg-text {
+    filter: drop-shadow(0 0 35px rgba(255, 45, 85, 0.6));
+}
+
+#c {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.envelope-icon {
+    transform-style: preserve-3d;
+    perspective: 800px;
+}
+
+.envelope-icon .border-t-pink-300 {
+    transform-origin: top center;
+    backface-visibility: hidden;
+}
+
+#envelope-trigger {
+    animation: floatGently 3s ease-in-out infinite alternate;
+}
+
+@keyframes floatGently {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+#confetti-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 99;
+}
+
+/* Plain-CSS replacements for Tailwind gradient classes.
+   Solid colors are always visible, even if gradients fail in a browser. */
+.question-title {
+    color: #fda4af;
+    text-shadow: 0 0 18px rgba(244, 63, 94, 0.55), 0 0 40px rgba(168, 85, 247, 0.35);
+}
+
+.love-title {
+    color: #fb7185;
+    text-shadow: 0 0 22px rgba(244, 63, 94, 0.7), 0 0 50px rgba(168, 85, 247, 0.45);
+}
+
+.yes-btn {
+    background-color: #f43f5e;
+    background-image: linear-gradient(90deg, #ec4899, #f43f5e);
+}
+
+.yes-btn:hover {
+    background-color: #e11d48;
+    background-image: linear-gradient(90deg, #db2777, #e11d48);
+}
+
+.envelope-grad {
+    background-color: #f43f5e;
+    background-image: linear-gradient(135deg, #f472b6, #f43f5e);
+}
